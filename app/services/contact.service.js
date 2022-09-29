@@ -59,7 +59,7 @@ class ContactService {
         return result.value;
     }
     async findFavorite() {
-        return await this.Contact.find({ favorite: true });
+        return await this.Contact.find({ favorite: true }).toArray();
     }
     async deleteAll() {
         const result = await this.Contact.deleteMany({});
